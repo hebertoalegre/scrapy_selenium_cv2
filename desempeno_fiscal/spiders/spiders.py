@@ -61,7 +61,7 @@ class FMISpider(scrapy.Spider):
         img = cv2.blur(img,(3,3))
 
         # umbralizar
-        thresh = cv2.threshold(img,100, 23535, cv2.THRESH_BINARY_INV)[1] 
+        thresh = cv2.threshold(img,100, 255, cv2.THRESH_BINARY_INV)[1] 
             
         # find countors
         cnts = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
